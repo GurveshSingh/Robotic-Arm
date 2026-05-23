@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <ros2_control name="Arm" type="system">
+    <hardware>
+     <plugin>mock_components/GenericSystem</plugin>\
+     <param name="calculate_dynamics">true</param>
+      <!--<plugin>my_robot_hardware/MyRobotHardwareInterface</plugin>
+      <param name="serial_port">/dev/ttyUSB0</param>-->
+    </hardware>
+
+    <joint name="base_yaw_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+
+    <joint name="arm_joint1">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+
+    <joint name="arm_joint2">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+
+  </ros2_control>
+
+</robot>
+

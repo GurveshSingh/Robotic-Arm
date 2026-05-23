@@ -1,0 +1,13 @@
+<launch>
+    <let name="urdf_path"
+         value="$(find-pkg-share my_robot_description)/urdf/my_robot.urdf.xacro"/>
+
+    <node pkg="my_robot_commander" exec="test_moveit" output="screen">
+        <param name="robot_description"
+               value="$(command 'xacro $(var urdf_path)')"/>
+        <param name="robot_description_semantic"
+               value="$(command 'cat $(find-pkg-share my_robot_moveit_config)/config/my_robot.srdf')"/>
+        <param name="robot_description_kinematics"
+               value="$(command 'cat $(find-pkg-share my_robot_moveit_config)/config/kinematics.yaml')"/>
+    </node>
+</launch>

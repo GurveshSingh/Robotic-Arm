@@ -1,0 +1,32 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+#    forward_command_controller:
+#      type: forward_command_controller/ForwardCommandController
+
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+#forward_command_controller:
+#  ros__parameters:
+#    joints:
+#      - base_yaw_joint
+#      - arm_joint1
+#      - arm_joint2
+#    interface_name: position
+#
+joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - base_yaw_joint
+      - arm_joint1
+      - arm_joint2
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position

@@ -1,0 +1,6 @@
+# Default initial positions for my_robot's ros2_control fake system
+
+initial_positions:
+  arm_joint1: 0
+  arm_joint2: 0
+  base_yaw_joint: 0

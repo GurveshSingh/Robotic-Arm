@@ -1,0 +1,13 @@
+<library path="my_robot_hardware">  <!--added in cmake open cpp file -->
+  <class
+    name="my_robot_hardware/MyRobotHardwareInterface"
+    type="my_robot_hardware::MyRobotHardwareInterface"
+    base_class_type="hardware_interface::SystemInterface">
+    <description>
+      Hardware interface for ST3215 servos via Waveshare ESP32 board
+    </description>
+  </class>
+</library>
+
+
+<!--used for making plugin library -->
