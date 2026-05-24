@@ -18,12 +18,11 @@ int main(int argc, char **argv)
     arm.setMaxVelocityScalingFactor(1.0);
     arm.setMaxAccelerationScalingFactor(1.0);
 
-    //Named Goal
+    std::vector<double> joints = { 0.5,0.0,0.5};
 
     arm.setStartStateToCurrentState();
-    arm.setNamedTarget("pose1");
-
-    //planning
+    arm.setJointValueTarget(joints);
+    
     moveit::planning_interface::MoveGroupInterface::Plan plan1;
     bool sucess = (arm.plan(plan1) == moveit::core::MoveItErrorCode::SUCCESS);
 
@@ -42,5 +41,3 @@ int main(int argc, char **argv)
     return 0;
 }
 
-//as we need two threads so if we normally spin any one thread
-//the code gets stuck there hence use executor to spin

@@ -3,10 +3,10 @@
 
   <ros2_control name="Arm" type="system">
     <hardware>
-     <plugin>mock_components/GenericSystem</plugin>\
-     <param name="calculate_dynamics">true</param>
-      <!--<plugin>my_robot_hardware/MyRobotHardwareInterface</plugin>
-      <param name="serial_port">/dev/ttyUSB0</param>-->
+    <!-- <plugin>mock_components/GenericSystem</plugin>\
+     <param name="calculate_dynamics">true</param> -->
+      <plugin>my_robot_hardware/MyRobotHardwareInterface</plugin>
+      <param name="serial_port">/dev/ttyUSB0</param>
     </hardware>
 
     <joint name="base_yaw_joint">
