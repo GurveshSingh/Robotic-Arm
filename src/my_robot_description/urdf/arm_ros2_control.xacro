@@ -5,7 +5,7 @@
     <hardware>
     <!-- <plugin>mock_components/GenericSystem</plugin>\
      <param name="calculate_dynamics">true</param> -->
-      <plugin>my_robot_hardware/MyRobotHardwareInterface</plugin>
+    <plugin>my_robot_hardware/MyRobotHardwareInterface</plugin>
       <param name="serial_port">/dev/ttyUSB0</param>
     </hardware>
 

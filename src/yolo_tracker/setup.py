@@ -24,7 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'yolo_node = yolo_tracker.yolo_node:main'
+            'yolo_node_visiual_servoing = yolo_tracker.yolo_node_visual_servoing:main',
+            'yolo_planner= yolo_tracker.yolo_planner:main'
         ],
     },
 )
